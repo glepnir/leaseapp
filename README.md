@@ -8,6 +8,12 @@
 - [x] 注册Api
 - [x] 登录Api
 - [x] 员工Api
+- [x] 权限管理
 - [ ] Vue前端
 ## 项目截图
-
+![image](https://github.com/MartiniGo/leaseapp/blob/master/screenshot/01.png)
+![image](https://github.com/MartiniGo/leaseapp/blob/master/screenshot/03.png)
+![image](https://github.com/MartiniGo/leaseapp/blob/master/screenshot/04.png)
+![image](https://github.com/MartiniGo/leaseapp/blob/master/screenshot/05.png)
+![image](https://github.com/MartiniGo/leaseapp/blob/master/screenshot/06.png)
+![image](https://github.com/MartiniGo/leaseapp/blob/master/screenshot/07.png)
