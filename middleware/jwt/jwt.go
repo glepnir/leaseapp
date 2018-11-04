@@ -28,6 +28,7 @@ var (
 type Customclaims struct {
 	Empname string `json:"empname"`
 	Phone   string `json:"phone"`
+	Role    string `json:"role"`
 	jwt.StandardClaims
 }
 

@@ -5,9 +5,8 @@ import (
 	"leaseapp/middleware/jwt"
 	"leaseapp/models"
 	"log"
-	"time"
-
 	"net/http"
+	"time"
 
 	jwtgo "github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
@@ -26,6 +25,7 @@ func GenerateToken(c *gin.Context, emp model.Employee) {
 	claims := jwt.Customclaims{
 		emp.EmpName,
 		emp.Phone,
+		emp.Role,
 		jwtgo.StandardClaims{
 			NotBefore: int64(time.Now().Unix() - 1000), //签名生效时间
 			ExpiresAt: int64(time.Now().Unix() + 3600), //签名过期时间 一小时

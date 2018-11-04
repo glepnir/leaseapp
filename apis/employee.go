@@ -28,6 +28,7 @@ func AddEmployee(c *gin.Context) {
 	phonenum := c.PostForm("phone")
 	pwd := c.PostForm("password")
 	ename := c.PostForm("empname")
+	emprole := c.PostForm("role")
 	exit := mongoose.IsExist(db, collection, bson.M{"phone": phonenum})
 	if exit {
 		c.JSON(http.StatusInternalServerError, gin.H{
@@ -45,6 +46,7 @@ func AddEmployee(c *gin.Context) {
 			Phone:    phonenum,
 			Password: hashedpwd,
 			EmpName:  ename,
+			Role:     emprole,
 		}
 		err = dao.AddEmployee(employee)
 		if err != nil {
@@ -74,6 +76,7 @@ func Login(c *gin.Context) {
 				"success": false,
 				"msg":     "用户名或密码错误",
 			})
+			return
 		}
 		gwt.GenerateToken(c, result)
 	} else {

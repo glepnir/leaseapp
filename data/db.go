@@ -18,6 +18,7 @@ const (
 
 // 定义mongo session
 var globalS *mgo.Session
+var MongoUrl = host + "/" + source
 
 //初始化连接MongoDB
 func init() {

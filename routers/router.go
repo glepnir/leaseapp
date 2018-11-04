@@ -3,18 +3,21 @@ package router
 
 import (
 	"leaseapp/apis"
-
 	"leaseapp/middleware/jwt"
+	"leaseapp/middleware/role"
 
 	"github.com/gin-gonic/gin"
 )
 
 func InitRouter() *gin.Engine {
-	router := gin.Default()
+	router := gin.New()
 	router.POST("/login", apis.Login)
-	authrequired := router.Group("/apis", jwt.JWTAuth())
+	authrequired := router.Group("/apis")
+	authrequired.Use(jwt.JWTAuth())
+	authrequired.Use(authz.AuthCheckRole())
 	{
 		authrequired.POST("/addemp", apis.AddEmployee)
+		authrequired.POST("/addrole", apis.AddCasbin)
 	}
 	return router
 }

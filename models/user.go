@@ -17,6 +17,7 @@ type Employee struct {
 	Phone    string        `json:"phone" bson:"phone"`
 	Password string        `json:"-" bson:"passoword"`
 	EmpName  string        `json:"empname" bson:"empname"`
+	Role     string        `json:"role" bson:"role"`
 }
 
 //新增用户
