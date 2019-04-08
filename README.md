@@ -1,6 +1,6 @@
 # leaseapp
 
-## 租赁系统的API
+## 简单demo
 Gin框架，数据库mongodb，权限框架casbin，身份验证jwt-go
 ## 功能
 包括注册，密码加密，JWT登录，身份权限验证，员工增删改查，个人信息，
@@ -9,7 +9,7 @@ Gin框架，数据库mongodb，权限框架casbin，身份验证jwt-go
 - [x] 登录Api
 - [x] 员工Api
 - [x] 权限管理
-- [ ] Vue前端
+
 ## 项目截图
 ![image](https://github.com/MartiniGo/leaseapp/blob/master/screenshot/01.png)
 ![image](https://github.com/MartiniGo/leaseapp/blob/master/screenshot/03.png)
